@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leo Stillus Barbearia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            text-align: center;
+            background: linear-gradient(to bottom, #333, #555);
+            padding-bottom: 20px;
+            color: #fff;
+        }
+
+        header img {
+            width: 100%;
+            height: auto;
+            max-height: 300px;
+            object-fit: cover;
+        }
+
+        header h1 {
+            margin: 0;
+            padding: 20px;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #555;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            width: 300px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+            text-align: center;
+        }
+
+        .card-content h3 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .card-content p {
+            font-size: 1rem;
+            color: #666;
+        }
+
+        .agendamento {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .agendamento a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #333;
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+        }
+
+        .agendamento a:hover {
+            background-color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .card {
+                width: 100%;
+            }
+
+            .agendamento a {
+                font-size: 1rem;
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/logo-leo-stillus.png" alt="Logo Leo Stillus">
+        <h1>Leo Stillus Barbearia</h1>
+    </header>
+
+    <div class="container">
+        <section class="section">
+            <h2>Serviços</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="img/corte-normal.jpg" alt="Corte Normal">
+                    <div class="card-content">
+                        <h3>Corte Normal</h3>
+                        <p>R$ 20,00</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/corte-degrade.jpg" alt="Corte Degradé">
+                    <div class="card-content">
+                        <h3>Corte Degradé</h3>
+                        <p>R$ 30,00</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/barba.jpg" alt="Barba">
+                    <div class="card-content">
+                        <h3>Barba</h3>
+                        <p>R$ 15,00</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/tesoura.jpg" alt="Corte tesoura">
+                    <div class="card-content">
+                        <h3>Limpeza de Barba</h3>
+                        <p>R$ 25,00</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/sobrancelha.jpg" alt="Sobrancelhas">
+                    <div class="card-content">
+                        <h3>Sobrancelhas</h3>
+                        <p>R$ 10,00</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/pigmentacao.jpg" alt="Pigmentação">
+                    <div class="card-content">
+                        <h3>Pigmentação</h3>
+                        <p>R$ 15,00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Combos</h2>
+            <div class="card-container">
+                <div class="card">
+                    <img src="img/combo-corte-barba.jpg" alt="Corte Normal e Barba">
+                    <div class="card-content">
+                        <h3>Corte Normal e Barba</h3>
+                        <p>R$ 30,00</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/combo-degrade-barba.jpg" alt="Corte Degradé com Barba">
+                    <div class="card-content">
+                        <h3>Corte Degradé com Barba</h3>
+                        <p>R$ 40,00</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="img/combo-degrade-barba-sobrancelha.jpg" alt="Corte Degradé com Barba e Sobrancelha">
+                    <div class="card-content">
+                        <h3>Corte Degradé, Barba e Sobrancelha</h3>
+                        <p>R$ 50,00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="agendamento">
+            <h2>Agende seu horário</h2>
+            <a href="https://wa.me/557187415958?text=Olá%20Leonardo,%20gostaria%20de%20agendar%20um%20horário!" target="_blank">Agendar pelo WhatsApp</a>
+        </section>
+    </div>
+
+    <footer>
+        <p>Leo Stillus Barbearia &copy; 2024</p>
+    </footer>
+</body>
+</html>

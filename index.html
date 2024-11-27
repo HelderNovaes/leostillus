@@ -6,7 +6,30 @@
     <title>Leo Stillus Barbearia</title>
     <link rel="icon" href="img/favicon-32x32.png" type="image/x-icon">
     <link rel="stylesheet" href="css/style.css">
-  
+    <link rel="stylesheet" href="javascript.js">
+    <link rel="stylesheet" href="hps.php">
+    <script>
+        function enviarWhatsApp(event) {
+            event.preventDefault();  // Impede o envio do formulário
+
+            // Coleta os dados do formulário
+            var nome = document.getElementById("nome").value;
+            var telefone = document.getElementById("telefone").value;
+            var data = document.getElementById("data").value;
+
+            // Cria a mensagem para o WhatsApp
+            var mensagem = "Olá Leonardo, gostaria de agendar um horário para os seguintes serviços:\n";
+            mensagem += "Nome: " + nome + "\n";
+            mensagem += "Telefone: " + telefone + "\n";
+            mensagem += "Data: " + data + "\n";
+
+            // Codifica a mensagem para URL
+            var url = "https://wa.me/557187415958?text=" + encodeURIComponent(mensagem);
+
+            // Redireciona para o WhatsApp
+            window.open(url, "_blank");
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -49,7 +72,7 @@
                 <div class="card">
                     <img src="img/sobrancelha.jpg" alt="Sobrancelhas">
                     <div class="card-content">
-                        <h3>Sobrgancelhas</h3>
+                        <h3>Sobrancelhas</h3>
                         <p>R$ 10,00</p>
                     </div>
                 </div>
@@ -90,9 +113,42 @@
             </div>
         </section>
 
+        <!-- Nova seção de Planos -->
+        <section class="planos">
+            <h2>Planos</h2>
+            <div class="planos-container">
+                <div class="plano">
+                    <h3>Plano 2 cortes/mês</h3>
+                    <p>R$ 50,00</p>
+                    <p>Inclui 2 cortes por mês, só que é de segunda a quarta.</p>
+                </div>
+                <div class="plano">
+                    <h3>Plano 4 cortes/mês</h3>
+                    <p>R$ 90,00</p>
+                    <p>Inclui 4 cortes por mês, só que é de segunda a quarta.</p>
+                </div>
+                <div class="plano">
+                    <h3>Plano Ilimitado</h3>
+                    <p>R$ 150,00</p>
+                    <p>Inclui cortes ilimitados por mês, e pode cortar todos os dias.</p>
+                </div>
+            </div>
+        </section>
+
         <section class="agendamento">
             <h2>Agende seu horário</h2>
-            <a href="https://wa.me/557187415958?text=Olá%20Leonardo,%20gostaria%20de%20agendar%20um%20horário!" target="_blank">Agendar pelo WhatsApp</a>
+            <form onsubmit="enviarWhatsApp(event)">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+    
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone" required>
+    
+                <label for="data">Data:</label>
+                <input type="date" id="data" name="data" required>
+    
+                <button type="submit">Confirmar Agendamento</button>
+            </form>
         </section>
     </div>
 

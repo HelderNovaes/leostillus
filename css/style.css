@@ -19,13 +19,7 @@ header {
     position: relative; /* Adiciona contexto para posicionar as imagens */
 }
 
-/* ==================== HEADER ==================== */
-header {
-    position: relative; /* Necessário para posicionar as imagens absolutas */
-    margin: 0;
-
-}
-
+/* ==================== HEADER IMAGE ==================== */
 .fp {
     width: 100%;
     height: auto;
@@ -33,6 +27,7 @@ header {
     object-fit: cover;
 }
 
+/* ==================== HEADER TEXT ==================== */
 .fotos {
     position: relative;
     text-align: center;

@@ -16,13 +16,13 @@
             var nome = document.getElementById("nome").value;
             var telefone = document.getElementById("telefone").value;
             var data = document.getElementById("data").value;
-
+            var horario = document.getElementById("horario").value;
             // Cria a mensagem para o WhatsApp
             var mensagem = "Olá Leonardo, gostaria de agendar um horário para os seguintes serviços:\n";
             mensagem += "Nome: " + nome + "\n";
             mensagem += "Telefone: " + telefone + "\n";
             mensagem += "Data: " + data + "\n";
-
+            mensagem += "Horario: " + horario + "\n";
             // Codifica a mensagem para URL
             var url = "https://wa.me/557187415958?text=" + encodeURIComponent(mensagem);
 
@@ -138,18 +138,22 @@
         <section class="agendamento">
             <h2>Agende seu horário</h2>
             <div class="central">
-            <form onsubmit="enviarWhatsApp(event)" class="terminar">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
-    
-                <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone" required>
-    
-                <label for="data">Data:</label>
-                <input type="date" id="data" name="data" required>
-    
-                <button type="submit">Confirmar Agendamento</button>
-            </form>
+                <form onsubmit="enviarWhatsApp(event)">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+                
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="Seu telefone" required>
+                
+                    <label for="data">Data:</label>
+                    <input type="date" id="data" name="data" required>
+                
+                    <label for="horario">Horário:</label>
+                    <input type="time" id="horario" name="horario" required>
+                
+                    <button type="submit">Confirmar Agendamento</button>
+                </form>
+                
         </div>
         </section>
     </div>

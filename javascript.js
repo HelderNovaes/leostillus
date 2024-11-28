@@ -18,6 +18,7 @@
         const nome = document.getElementById('nome').value;
         const telefone = document.getElementById('telefone').value;
         const data = document.getElementById('data').value;
+        const horario = document.getElementById('horario').value;
         
         if (!nome || !telefone || !data) {
             alert("Por favor, preencha todos os campos.");

@@ -1,11 +1,12 @@
+/* ==================== GLOBAL STYLES ==================== */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     background-color: #f4f4f4;
     color: #333;
-    
 }
 
+/* ==================== HEADER ==================== */
 header {
     text-align: center;
     background: linear-gradient(to bottom, #333, #555);
@@ -28,6 +29,7 @@ header h1 {
     text-transform: uppercase;
 }
 
+/* ==================== CONTAINER ==================== */
 .container {
     padding: 20px;
     max-width: 1200px;
@@ -38,6 +40,7 @@ header h1 {
     margin-bottom: 40px;
 }
 
+/* ==================== TITLES ==================== */
 h2 {
     font-size: 2rem;
     color: #555;
@@ -45,6 +48,7 @@ h2 {
     margin-bottom: 20px;
 }
 
+/* ==================== CARDS ==================== */
 .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -88,6 +92,7 @@ h2 {
     color: #666;
 }
 
+/* ==================== AGENDAMENTO ==================== */
 .agendamento {
     text-align: center;
     margin-top: 20px;
@@ -108,6 +113,7 @@ h2 {
     background-color: #555;
 }
 
+/* ==================== FOOTER ==================== */
 footer {
     text-align: center;
     padding: 10px;
@@ -115,9 +121,13 @@ footer {
     color: #fff;
     font-size: 0.9rem;
 }
+
+/* ==================== PLANOS ==================== */
 .planos-container {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
     margin-top: 20px;
 }
 
@@ -125,7 +135,7 @@ footer {
     border: 1px solid #ccc;
     padding: 20px;
     border-radius: 10px;
-    width: 30%;
+    width: 300px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -147,62 +157,18 @@ footer {
     color: #007BFF;
 }
 
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    .card {
-        width: 100%;
-    }
-
-    .agendamento a {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-}
-.planos-container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
-}
-
-.plano {
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
-    width: 30%;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.plano h3 {
-    color: #333;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.plano p {
-    font-size: 1rem;
-    margin: 5px 0;
-}
-
-.plano p:first-child {
-    font-weight: bold;
-    font-size: 1.25rem;
-    color: #007BFF;
-}
+/* ==================== FORM ==================== */
 form {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px; /* Largura máxima do formulário */
+    max-width: 400px;
     box-sizing: border-box;
+    margin: 20px auto;
 }
 
-/* Labels */
 label {
     display: block;
     font-weight: bold;
@@ -211,7 +177,6 @@ label {
     color: #333;
 }
 
-/* Inputs */
 input[type="text"], input[type="tel"], input[type="date"], input[type="time"] {
     width: 100%;
     padding: 10px;
@@ -226,13 +191,7 @@ input:focus {
     border-color: #007BFF;
     outline: none;
 }
-body .central{
-    display: flex;
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center;    /* Centraliza verticalmente */
-    
-}
-/* Botão */
+
 button {
     background-color: #007BFF;
     color: #fff;
@@ -249,7 +208,22 @@ button:hover {
     background-color: #0056b3;
 }
 
-/* Responsividade */
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .agendamento a {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
 @media (max-width: 480px) {
     form {
         padding: 15px;

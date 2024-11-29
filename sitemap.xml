@@ -10,7 +10,10 @@
 <url>
   <loc>https://leostillus.duckdns.org/</loc>
   <lastmod>2024-11-29T05:07:06+00:00</lastmod>
+<changefreq>daily</changefreq>
+    <priority>1.0</priority>
 </url>
 
 
-</urlset>
+
+  

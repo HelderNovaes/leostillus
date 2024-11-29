@@ -56,12 +56,6 @@ header {
     right: 100px;  /* Logo à direita */
 }
 
-/* ==================== RESPONSIVE ==================== */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
-}
 
 header h1 {
     text-align: center;
@@ -250,11 +244,21 @@ button:hover {
 }
 
 /* ==================== RESPONSIVE DESIGN ==================== */
+
+
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
+    .fotos h1 {
+        font-size: 3rem;
     }
 
+    .logo-left {
+        left: 0px;
+        height: 250px;
+    }
+    .logo-right{
+        right: 0px;
+        height: 250px;
+    }
     .card {
         width: 100%;
     }
@@ -266,6 +270,17 @@ button:hover {
 }
 
 @media (max-width: 480px) {
+    .fotos h1 {
+        font-size: 1.3rem;
+    }
+    .logo-left {
+        left: -25px;
+        height: 150px;
+    }
+    .logo-right{
+        right: -25px;
+        height: 150px;
+    }
     form {
         padding: 15px;
     }
